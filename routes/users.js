@@ -6,6 +6,7 @@ const AuthenticateWithJWT = require('../middlewares/AuthenticateWithJWT');
 
 router.post('/register', async (req, res) => {
     try {
+        console.log(req.body);
         const userId = await userService.registerUser(req.body);
 
         res.status(201).json({ message: "User registered successfully", userId });
@@ -22,7 +23,7 @@ router.post('/login', async (req, res) => {
 
             const token = jwt.sign({
                 userId: user.id
-            }, process.env.JWT_SECRET, {
+            }, process.env.TOKEN_SECRET, {
                 expiresIn: '1h'
             });
 

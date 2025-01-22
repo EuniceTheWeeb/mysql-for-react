@@ -1,9 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 require('dotenv').config();
-
 const pool = require('./database');
-
 const app = express();
 
 // import the routers
