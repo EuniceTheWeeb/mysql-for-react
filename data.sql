@@ -1,10 +1,10 @@
 use ecommerce;
 
 INSERT INTO products (name, price, image) VALUES
-('Sleek Smartwatch', 199.99, 'https://picsum.photos/id/20/300/200'),
-('Wireless Earbuds', 79.99, 'https://picsum.photos/id/1/300/200'),
-('Portable Power Bank', 49.99, 'https://picsum.photos/id/26/300/200'),
--- ('HD Action Camera', 129.99, 'https://picsum.photos/id/96/300/200');
+('Pineapple Tarts (Bottle)', 21.90, 'images/pineappleTart.jpg'),
+('Bakkwa (1kg)', 25.90, 'images/bakkwa.jpg'),
+('Love Letter Egg Roll Style (Bottle)', 16.80, 'images/loveLetters.jpg'),
+('Bountiful Yusheng (7-10 pax)', 45.80, 'images/yusheng3.jpg');
 
 INSERT INTO marketing_preferences (id, preference) VALUES (1, 'email');  -- Email Marketing
 INSERT INTO marketing_preferences (id, preference) VALUES (2, 'sms');    -- SMS Marketing
