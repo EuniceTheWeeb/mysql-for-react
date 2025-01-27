@@ -45,6 +45,7 @@ router.post('/login', async (req, res) => {
 })
 
 router.get('/me', AuthenticateWithJWT, async (req, res) => {
+    
     try {
         const user = await userService.getUserDetailsById(req.userId);
         if (!user) {
@@ -69,8 +70,8 @@ router.get('/me', AuthenticateWithJWT, async (req, res) => {
 })
 
 router.put('/me', AuthenticateWithJWT, async (req, res) => {
+    console.log("req.body", req.body);
     try {
-        console.log(req.body);
         // todo: validate if all the keys in req.body exists
         if (!req.body.name || !req.body.email || !req.body.salutation || !req.body.marketingPreferences || !req.body.country) {
             return res.status(401).json({
